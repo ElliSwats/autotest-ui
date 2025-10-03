@@ -66,8 +66,8 @@ class TestCourses:
     @allure.severity(Severity.CRITICAL)
     def test_edit_course(self, courses_list_page_with_state: CoursesListPage, create_course_page: CreateCoursePage):
         create_course_page.go_to_url(AppRoute.COURSES_CREATE)
-        create_course_page.image_upload_widget.upload_preview_image(
-            r"C:\Users\Александр\Learning IT\QA_Alena\autotest-ui\testdata\files\image.png")
+        create_course_page.image_upload_widget.upload_preview_image('./testdata/files/image.png')
+            # r"C:\Users\Александр\Learning IT\QA_Alena\autotest-ui\testdata\files\image.png"
         create_course_page.image_upload_widget.check_visible(is_image_uploaded=True)
         create_course_page.create_course_form.fill(
             title="Playwright",
