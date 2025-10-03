@@ -34,8 +34,8 @@ class TestCourses:
         create_course_page.create_course_exercises_toolbar_view.check_visible()
         create_course_page.check_visible_exercises_empty_view()
 
-        create_course_page.image_upload_widget.upload_preview_image(
-            r"C:\Users\Александр\Learning IT\QA_Alena\autotest-ui\testdata\files\image.png")
+        create_course_page.image_upload_widget.upload_preview_image('./testdata/files/image.png')
+            # r"C:\Users\Александр\Learning IT\QA_Alena\autotest-ui\testdata\files\image.png"
         create_course_page.image_upload_widget.check_visible(is_image_uploaded=True)
         create_course_page.create_course_form.fill(
             title="Playwright",
