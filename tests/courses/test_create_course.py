@@ -8,7 +8,7 @@ from pages.courses.create_course_page import CreateCoursePage
 def test_create_course(courses_list_page_with_state: CoursesListPage, create_course_page: CreateCoursePage):
     create_course_page.go_to_url("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create")
 
-    create_course_page.create_course_toolbar_view.check_visible()
+    create_course_page. create_course_toolbar_view.check_visible()
     create_course_page.image_upload_widget.check_visible(is_image_uploaded=False)
     create_course_page.create_course_form.check_visible(
         title="", max_score="0", min_score="0", description="", estimated_time=""
